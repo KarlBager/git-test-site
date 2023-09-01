@@ -6,27 +6,37 @@
     <title>Karls Test Site</title>
     <link rel="stylesheet" href="style.css">    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <section>
     <div class="container">
         <div class="heading">
-            <h1>Karls CSS test-site</h1>
-            <h2>- stedet, hvor Karl kan teste de CSS funktioner, han er lidt usikker på</h2>
+            <h1 id="pageHeadingText">Karls test-site</h1>
+            <h2 id="pageSecondaryHeadingText">- stedet, hvor Karl kan teste de CSS og funktioner, han er lidt usikker på</h2>
         </div>
+
         <div class="flex-container">
             <img class="flex-image" src="img/skotland.jpg" alt="Dette er et billede af Edinburgh Castle">
         </div>
+        
         <div class="flex-container">
             <div class="flex-element"></div>
             <div class="flex-element"></div>
             <div class="flex-element"></div>
         </div>
+        
         <div class="grid-container">
             <div class="grid-element grid1"></div>
-            <div class="grid-element grid2"></div>
-            <div class="grid-element grid3"></div>
+            <div id="gridEl2" class="grid-element grid2">
+                <button onclick="changeColor()">Skift farven på denne blok</button>
+                <button onclick="changeColorBack()">Skift farven på denne blok tilbage</button>
+            </div>
+        
+            <div id="gridEl3" class="grid-element grid3">
+                <button onclick="changeColorRandom()">Skift farven på denne blok til en <span id="textRandomColor">tilfældig farve</span></button>
+            </div>
+          
             <div class="grid-element grid4"></div>
             <div class="grid-element grid5"></div>
             <div class="grid-element grid6"></div>
@@ -34,4 +44,5 @@
         </div>
     </section>
 </body>
+
 </html>

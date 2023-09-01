@@ -94,7 +94,6 @@ a#justeret-hyperlink:hover{
 .grid2{
     grid-row: 2;
     grid-column: 2;
-;
 }
 .grid3{
     grid-row: 3;
@@ -103,6 +102,10 @@ a#justeret-hyperlink:hover{
 .grid-element{
     background-color: lightgreen;
     border: #333333 solid 3px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .grid4{
     background-color:lightsalmon;
@@ -123,4 +126,7 @@ a#justeret-hyperlink:hover{
     background-color: lightpink;
     grid-row: 2;
     grid-column: 3;
+}
+button{
+    height: auto;
 }
