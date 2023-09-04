@@ -58,7 +58,7 @@ function changeColorRandom(){
 let visualGridRow = 1;
 document.querySelector('visualGridContainer');
 
-const cellCount = 100;
+const cellCount = 2500;
 columnCount = Math.sqrt(cellCount);
 console.log(columnCount);
 
