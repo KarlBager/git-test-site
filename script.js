@@ -45,33 +45,55 @@ function changeColorRandom(){
 
 
 
+
+
+
+
+
+
+
+
+
+
 let visualGridRow = 1;
 document.querySelector('visualGridContainer');
 
+const cellCount = 2500;
+columnCount = Math.sqrt(cellCount);
+console.log(columnCount);
 
-nextRowTrigger = 9;
+nextRowTrigger = columnCount-1;
 nextRowTriggers = [nextRowTrigger];
-for (var j = 0; j < 9; j++){
-nextRowTrigger = nextRowTrigger + 10;
+
+for (var j = 0; j < columnCount-1; j++){
+nextRowTrigger = nextRowTrigger + columnCount;
 nextRowTriggers.push(nextRowTrigger);
 }
 console.log(nextRowTriggers);
 
 
 
-for (var i = 0; i < 100; i++){
+spectrumColor = "hsl("
+
+let hue = 0;
+for (var i = 0; i < cellCount; i++){
 
 let createCells = document.createElement('div');
-className = "grid-element visualGrid" + i;
+className = "grid-element visualGridElement visualGrid" + i;
 createCells.setAttribute('class', className);
 createCells.style.gridRow = visualGridRow;
-createCells.style.backgroundColor = getRandomColor();
+
+
+let hueIncreaseBy = 360/cellCount;
+
+hue = hue + hueIncreaseBy;
+spectrumColor = "hsl(" + hue + ",100%,50%)";
+
+createCells.style.backgroundColor = spectrumColor;
 
 if(nextRowTriggers.includes(i)){
-visualGridRow++;
+  visualGridRow++;
 }
-
-console.log(className);
 
 visualGridContainer.appendChild(createCells);
 }
