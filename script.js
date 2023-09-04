@@ -58,7 +58,7 @@ function changeColorRandom(){
 let visualGridRow = 1;
 document.querySelector('visualGridContainer');
 
-const cellCount = 2500;
+const cellCount = 100;
 columnCount = Math.sqrt(cellCount);
 console.log(columnCount);
 
@@ -75,8 +75,16 @@ console.log(nextRowTriggers);
 
 spectrumColor = "hsl("
 
+
+
+
+
+
+
 let hue = 0;
+
 for (var i = 0; i < cellCount; i++){
+
 
 let createCells = document.createElement('div');
 className = "grid-element visualGridElement visualGrid" + i;
@@ -97,4 +105,8 @@ if(nextRowTriggers.includes(i)){
 
 visualGridContainer.appendChild(createCells);
 }
+
+
+
+
 
